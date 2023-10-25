@@ -119,7 +119,7 @@ take_possession("R", "oggetto").
  
 % threat("R", "V").
 % push("R", "V").
-% lesione("R", "V").
+% damage("R", "V").
 % tug("R", "V").
 % take_possession("R", "oggetto").
 
