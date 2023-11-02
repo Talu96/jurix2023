@@ -1,6 +1,6 @@
 # Workshop Jurix 2023
 
-This repository contains the code of the workshop proposed for Jurix 2023. 
+This repository contains the code submitted to the workshop proposed for Jurix 2023. 
 
 ## modello.lp
 This file contains the ASP modellation of theft by snatch and robbery.
