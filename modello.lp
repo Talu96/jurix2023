@@ -26,15 +26,20 @@ subtract(R, C) :- snatch(R, C), agent(R), res(C).
 
 person_violence(R, V) :- violence(R, V).
 person_violence(R, V) :- foreshadowing_violence(R), agent(V).                      %%se le azioni possono portare a una lesione ma non accade è comunque violenza
-indirect_violence_person((R, V) :- violence(R, V), not foreshadowing_violence(R). 
+indirect_violence_person(R, V) :- violence(R, V), not foreshadowing_violence(R). 
 res_violence(R, C) :- snatch(R, C), agent(R), res(C).
 
 
 %% Vaghezza aderenza: L è il livello di aderenza (da 1 a 4, aderenza più stretta a 4)
 
+level(1..4).
+
+1{adherence(S, C, L): level(L)}1 :- unknown_adherence(S, C).
+
 tight_physical_adherence(S, C) :- adherence(S, C, L), agent(S), res(C), L>2.
 loose_physical_adherence(S, C) :- adherence(S, C, L), agent(S), res(C), L<3.
 
+level(L) :- adherence(S, C, L).
 
 %%%% precisazione violenza (massima, cassazione penale, sez II, 11/12/2013, n 49832)
 
