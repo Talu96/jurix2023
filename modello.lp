@@ -21,12 +21,12 @@ attempted_theft(R, V, C) :- subtract(R, C), own(V, C), theft_intention(R), not t
 %%%% precisazione violenza (massima, tribunale Bologna, sez I, 11/05/2023, n 440)
 
 violence(R, V) :- damage(R, V), agent(R), agent(V), V!=R.      
-snatch(R, C) :- loose_physical_adherence(V, C), subtract(R, C), agent(V).
+snatch(R, C) :- loose_physical_adherence(V, C), subtract(R, C), agent(V), V!=R.
 subtract(R, C) :- snatch(R, C), agent(R), res(C).
 
 person_violence(R, V) :- violence(R, V).
-person_violence(R, V) :- foreshadowing_violence(R), agent(V).                      %%se le azioni possono portare a una lesione ma non accade è comunque violenza
-indirect_violence_person(R, V) :- violence(R, V), not foreshadowing_violence(R). 
+person_violence(R, V) :- foreshadowing_violence(R), agent(V), V!=R.                      %%se le azioni possono portare a una lesione ma non accade è comunque violenza
+indirect_violence_person(R, V) :- violence(R, V), not foreshadowing_violence(R), V!=R. 
 res_violence(R, C) :- snatch(R, C), agent(R), res(C).
 
 
@@ -44,7 +44,7 @@ level(L) :- adherence(S, C, L).
 %%%% precisazione violenza (massima, cassazione penale, sez II, 11/12/2013, n 49832)
 
 person_violence(R, V) :- resistence(V, R), not interruption(R).
-person_violence(R, V) :- tight_physical_adherence(V, C), subtract(R, C), agent(V).
+person_violence(R, V) :- tight_physical_adherence(V, C), subtract(R, C), agent(V), R!=V.
 
 
 %%%% Art.624 bis furto con strappo
