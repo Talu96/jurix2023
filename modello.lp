@@ -90,4 +90,4 @@ resistence(V, R) :- tug(R, V).
 2{damage(R, V); using_judgment("#4")}2 :- tug(R, V), push(R, V).
 2{damage(R, V); using_judgment("#5")}2 :- block(R, V, P), part_of_body(V, P).
 2{threat(R, V); using_judgment("#6")}2 :- selfdetermination_limitation(R, V).
-2{foreshadowing_violence(R); using_judgment("#7")}2 :- subtract(R, C), tight_physical_adherence(C).
+2{foreshadowing_violence(R); using_judgment("#7")}2 :- subtract(R, C), tight_physical_adherence(S, C), agent(S).

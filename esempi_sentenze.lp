@@ -48,7 +48,7 @@ take_possession("R", "oggetto").
 %%%% da una donna aveva trascinato costei per qualche metro sulla carreggiata facendola rotolare a terra
 %%%% fino a quando non si era spezzata la cinghia della bag).” 
 
-% make_fall("R", "V").
+% drag("R", "V").
 % tug("R", "V").
 % take_possession("R", "oggetto").
 
