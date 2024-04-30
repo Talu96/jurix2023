@@ -40,21 +40,30 @@
 % essere sottratta se non con violenza alla persona.
 
 
-% agent("Mario Rossi").
-% agent("Giorgio Bianchi").
-% theft_intention("Mario Rossi").
-% subtract("Mario Rossi", "necklace").
-% res("necklace").
-% own("Giorgio Bianchi", "necklace").
-% adherence("Giorgio Bianchi", "necklace", 3).
-
-
-%% Esempio dove non assegnamo un livello di aderenza all'oggetto
-
 agent("Mario Rossi").
 agent("Giorgio Bianchi").
 theft_intention("Mario Rossi").
 subtract("Mario Rossi", "necklace").
 res("necklace").
 own("Giorgio Bianchi", "necklace").
+take_possession("Mario Rossi", "necklace").
 unknown_adherence("Giorgio Bianchi", "necklace").
+% adherence("Giorgio Bianchi", "necklace", 3).
+
+#show robbery/2.
+#show theft_snatch/2.
+#show attempted_robbery/2.
+#show attempted_theft_snatch/2.
+#show adherence/3.
+
+
+
+%% Esempio dove non assegnamo un livello di aderenza all'oggetto
+
+% agent("Mario Rossi").
+% agent("Giorgio Bianchi").
+% theft_intention("Mario Rossi").
+% subtract("Mario Rossi", "necklace").
+% res("necklace").
+% own("Giorgio Bianchi", "necklace").
+% unknown_adherence("Giorgio Bianchi", "necklace").

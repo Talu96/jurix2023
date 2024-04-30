@@ -100,7 +100,7 @@ def get_indirect_violence():
             inquirer.List(
                 name="indirect_violence",
                 message="Did the thief make violence indirectly to the victim to steal the object",
-                choices=["Yes", "No", "Not sure"],
+                choices=["Yes", "No"],
             )]
     answers = inquirer.prompt(questions)
     return True if answers["indirect_violence"] != "No" else False

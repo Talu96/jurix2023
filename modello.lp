@@ -7,12 +7,20 @@ res(C) :- energy(C), economic_value(C).
 
 % reo: chi sottrae la cosa
 % vittima: chi subisce il furto
-reo(R) :- theft(R, V, C). 
-victim(V) :- theft(R, V, C). 
-reo(R) :- attempted_theft(R, V, C). 
-victim(V) :- attempted_theft(R, V, C). 
-agent(R) :- reo(R).
-agent(V) :- victim(V).
+reo(R, "robbery") :- robbery(R, V). 
+victim(V, "robbery") :- robbery(R, V). 
+
+reo(R, "attempted_robbery") :- attempted_robbery(R, V). 
+victim(V, "attempted_robbery") :- attempted_robbery(R, V). 
+
+reo(R, "theft_snatch") :- theft_snatch(R, V). 
+victim(V, "theft_snatch") :- theft_snatch(R, V). 
+
+reo(R, "attempted_theft_snatch") :- attempted_theft_snatch(R, V). 
+victim(V, "attempted_theft_snatch") :- attempted_theft_snatch(R, V). 
+
+agent(R) :- reo(R, C). % colui che commette un crimine
+agent(V) :- victim(V, C). % la parte lesa
 
 theft(R, V, C) :- subtract(R, C), own(V, C), theft_intention(R), take_possession(R, C), agent(V), agent(R), res(C), V!=R.     %% dò per scontato che è al fine di procurare profitto per sè/altri
 attempted_theft(R, V, C) :- subtract(R, C), own(V, C), theft_intention(R), not take_possession(R, C), agent(V), agent(R), res(C), V!=R. 

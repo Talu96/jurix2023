@@ -1,5 +1,5 @@
-reo("R").
-victim("V").
+agent("R").
+agent("V").
 theft_intention("R").
 physical_object("oggetto").
 own("V", "oggetto").
