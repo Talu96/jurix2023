@@ -2,7 +2,7 @@
 
 This repository contains the code submitted to the workshop proposed for **Jurix 2023** and to the conference of **CILC 2024**.
 
-# ILASP directory
+## ILASP directory
 This directory contains the files used to learn new rules with **ILASP**.
 
 - **`art_56.las`** – ILASP examples for Article 56.  
@@ -13,7 +13,7 @@ This directory contains the files used to learn new rules with **ILASP**.
 - **`crimes_against_person.las`** – ILASP examples for Articles 575, 579, 584, 588, 589, 589-bis, 59, 595, 609-bis, 610, and 614.  
 
 
-# ASP directory
+## ASP directory
 This directory contains the **ASP encoding** of legal articles.
 
 - **`art_56.lp`** – Encoding of Article 56.  
@@ -22,14 +22,14 @@ This directory contains the **ASP encoding** of legal articles.
 - **`crimes_against_person.lp`** – Encoding of Articles 575, 579, 584, 588, 589, 589-bis, 59, 595, 609-bis, 610, and 614.  
 - **`theft_robbery.lp`** – Encoding of Articles 624, 624-bis, and 628.  
 
-# Judgments directory
+## Judgments directory
 This directory contains **ASP-encoded judgments**, also used in ILASP examples.
 
 - **`all.lp`** – All encoded judgments, including those related to Articles 583, 581, and 582.  
 - **`crimes_against_person.lp`** – Judgments related to Articles 575, 579, 584, 588, 589, 589-bis, 59, 595, 609-bis, 610, and 614.  
 - **`theft.lp`** – Judgments related to Articles 624, 624-bis, and 628.  
 
-# tool_degree directory
+## tool_degree directory
 This directory contains files for the **tool that determines judgments in first and second degree**.
 
 - **`input_output/`** – Directory containing JSON files for ASP encoding.  
