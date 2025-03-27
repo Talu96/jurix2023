@@ -1,0 +1,23 @@
+{
+  "degree": "First degree",
+  "n_people": 2,
+  "agents": [
+    "Mark",
+    "Lucy"
+  ],
+  "theft": true,
+  "res": "Bracelet",
+  "reo": "Mark",
+  "victim": "Lucy",
+  "interruption": false,
+  "snatch": true,
+  "violence": true,
+  "indirect_violence": false,
+  "threat": false,
+  "adherent": true,
+  "adherence_level": 3,
+  "resistance": false,
+  "take_possession": true,
+  "violence_action": [],
+  "part_of_body": []
+}

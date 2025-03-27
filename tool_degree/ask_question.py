@@ -135,22 +135,22 @@ def get_adherence_level():
     answers = inquirer.prompt(questions)
     return answers["adherence_level"]
 
-def get_resistence():
+def get_resistance():
     questions = [
         inquirer.List(
-            "resistence",
-            message="Did victim  make resistence to the snatch",
+            "resistance",
+            message="Did victim  make resistance to the snatch",
             choices= ["Yes", "No"],
         )]
     
     answers = inquirer.prompt(questions)
-    return True if answers["resistence"] == "Yes" else False
+    return True if answers["resistance"] == "Yes" else False
 
 def get_interruption():
     questions = [
         inquirer.List(
             "interruption",
-            message="Did the thief interrupt the act when the resistence started",
+            message="Did the thief interrupt the act when the resistance started",
             choices= ["Yes", "No"]
         )]
     answers = inquirer.prompt(questions)
@@ -226,8 +226,8 @@ def json_to_asp(js):
             code = code + "indirect_person_violence(\"" + js["reo"] + "\", \"" + js["victim"] + "\").\n"
         if js["adherent"]:
             code = code + "adherence(\"" + js["victim"] + "\", \"" + js["res"] + "\", " + str(js["adherence_level"]) + ").\n"
-        if js["resistence"]:
-            code = code + "resistence(\"" + js["victim"] + "\", \"" + js["reo"] + "\").\n"
+        if js["resistance"]:
+            code = code + "resistance(\"" + js["victim"] + "\", \"" + js["reo"] + "\").\n"
         if not js["take_possession"]:
             code = code + "not take_possession(\"" + js["reo"] + "\", \"" + js["res"] + "\").\n"
             if js["interruption"]:               

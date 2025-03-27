@@ -1,0 +1,23 @@
+{
+  "degree": "First degree",
+  "n_people": 2,
+  "agents": [
+    "Veronica",
+    "Giulio"
+  ],
+  "theft": true,
+  "res": "necklace",
+  "reo": "Giulio",
+  "victim": "Veronica",
+  "snatch": true,
+  "violence": false,
+  "indirect_violence": false,
+  "threat": false,
+  "adherent": true,
+  "resistance": false,
+  "interruption": false,
+  "adherence_level": 1,
+  "take_possession": true,
+  "violence_action": [],
+  "part_of_body": []
+}
